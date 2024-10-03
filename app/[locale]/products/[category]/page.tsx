@@ -27,7 +27,9 @@ export default function ProductPage({
       setTitle('Room Diffuser');
     } else if (category === 'car') {
       setTitle('Car Diffuser');
-    } else {
+    } else if(category ==='spray'){
+      setTitle('Room Spray')
+    }else {
       setTitle('All Products');
     }
 

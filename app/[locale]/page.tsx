@@ -17,6 +17,7 @@ export default function HomePage() {
     'https://d3en4rwu5hlcjb.cloudfront.net/home/Main02.jpg',
     'https://d3en4rwu5hlcjb.cloudfront.net/home/Main03.jpg',
     'https://d3en4rwu5hlcjb.cloudfront.net/home/Main04.jpg',
+    'https://d3en4rwu5hlcjb.cloudfront.net/home/Main05.jpg',
   ];
 
   const imageWidthPixel: number = 300;

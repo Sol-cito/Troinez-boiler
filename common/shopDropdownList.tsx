@@ -11,4 +11,8 @@ export const SHOP_DROPDOWN_LIST = [
     title: 'Car Diffuser',
     href: '/products/car',
   },
+  {
+    title: 'Room Spray',
+    href: '/products/spray',
+  },
 ];
