@@ -73,7 +73,7 @@ export default function ProductItem({ product }: { product: Product }) {
             <p className={styles.item_newest_icon}>
               <span className={styles.icon}>new</span>
             </p>
-)}
+          )}
           {locale !== 'en' && (
             <div className={styles.cart_area} onClick={handleOnClickCart}>
               <Image
