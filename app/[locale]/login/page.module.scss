@@ -1,0 +1,39 @@
+@import '/app/common.scss';
+.login_wrapper {
+  .flex_box {
+    display: flex;
+    .image_box {
+      .login_box_title {
+        text-align: center;
+        font-size: $login-title-fz;
+      }
+      margin: 3.2vw auto;
+      width: 20vw;
+      height: 5vw;
+      img {
+        position: relative !important;
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .login_wrapper {
+    position: relative;
+    margin-top: 6vh;
+    height: 50vh;
+
+    .flex_box {
+      .image_box {
+        width: 60%;
+        height: 60%;
+
+        .login_box_title {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}

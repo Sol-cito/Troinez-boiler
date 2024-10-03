@@ -1,0 +1,27 @@
+.home {
+  background-color: ivory;
+
+  :global(.carousel .carousel-status) {
+    display: none;
+  }
+
+  :global(.control-dots > .dot) {
+    background-color: black;
+    width: 1rem;
+    height: 1rem;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .home {
+    .mobile_main_images {
+      display: flex;
+      flex-direction: column;
+
+      .main_image {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}

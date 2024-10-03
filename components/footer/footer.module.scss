@@ -1,0 +1,108 @@
+@import '/app/common.scss';
+
+$footer-height: $footer-ht;
+$footer-font-size: $footer-fz;
+
+.footer {
+  width: 75%;
+  align-items: center;
+  min-height: fit-content;
+  margin: 0 auto;
+  font-size: $footer-font-size;
+  min-height: $footer-height;
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+
+  p {
+    margin: 0;
+    line-height: 1.2vw;
+  }
+
+  .left {
+    width: 44%;
+
+    div {
+      margin-left: 2vw;
+    }
+
+    div:first-child {
+      p {
+        font-weight: bold;
+        margin-bottom: 1vw;
+      }
+    }
+  }
+
+  .mid {
+    width: 30%;
+  }
+
+  .right {
+    width: 35%;
+    .tos_policy {
+      margin-bottom: 1vw;
+      font-size: 0.9vw;
+      a {
+        margin: 0;
+        color: white;
+        text-decoration: none;
+      }
+    }
+
+    div {
+      display: flex;
+      justify-content: flex-end;
+
+      a {
+        margin-right: 1vw;
+        // height: $footer-icon-size;
+      }
+
+      a:last-child {
+        margin-right: 3vw;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 100%;
+    min-height: auto;
+    font-size: 2.5vw;
+
+    p {
+      line-height: inherit;
+    }
+
+    .left,
+    .mid,
+    .right {
+      width: 100%;
+      text-align: center;
+      margin: 1vh 0 1vh 0;
+
+      div {
+        margin: 0;
+      }
+    }
+
+    .right {
+      .tos_policy,
+      .sns_icons {
+        font-size: 2.5vw;
+        justify-content: center;
+
+        img {
+          margin: 0 2vw 0 2vw !important;
+        }
+      }
+    }
+  }
+}

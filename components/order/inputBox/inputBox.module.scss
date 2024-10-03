@@ -1,0 +1,135 @@
+.input_box {
+  margin: 1vw 0 1vw 0;
+}
+.phone_number {
+  width: 3vw;
+}
+.email_id {
+  width: 4vw;
+}
+.email {
+  width: 8vw;
+}
+.zipcode {
+  width: 6vw;
+}
+.zipcode_btn {
+  width: 4vw;
+}
+.address {
+  width: 40vw;
+}
+.request {
+  width: 40vw;
+}
+.warning {
+  color: red;
+  font-weight: bolder;
+}
+.ok {
+  color: green;
+  font-weight: bolder;
+}
+
+.address_input {
+  width: 100%;
+  height: 1.5vw;
+  font-size: 1.5vw;
+  font-weight: lighter;
+}
+
+.inputbox_div {
+  display: inline;
+  margin: 0.5vw 0 0.5vw 0;
+  .inputbox_tit {
+    font-size: 0.9vw;
+    font-weight: normal;
+    margin-bottom: 0.3%;
+  }
+
+  .phone_number_box {
+    display: inline-block;
+  }
+
+  .invalid_input {
+    border-style: solid;
+    border-color: red;
+  }
+
+  .input_six_digit {
+    padding: 0.5% 2% 0.5% 0.5%;
+  }
+
+  .email_input_box {
+    display: inline;
+
+    select {
+      font-size: 0.8rem;
+      margin-left: 0.3%;
+    }
+  }
+
+  .request_inputbox {
+    width: 100%;
+    height: 5vw;
+    font-size: 16px;
+  }
+  input {
+    font-weight: normal;
+    font-size: 1vw;
+    margin-bottom: 1%;
+  }
+}
+
+.mgn_left_1vw {
+  margin-left: 1vw;
+}
+
+@media screen and (max-width: 780px) {
+  .phone_number {
+    width: 15%;
+  }
+  .warning {
+    font-size: 0.7rem;
+  }
+
+  .address_input {
+    width: 95%;
+    font-size: 0.8rem;
+  }
+
+  .inputbox_div {
+    margin: 5% 0 5% 0;
+    .inputbox_tit {
+      font-size: 0.8rem;
+    }
+    .email_input_box {
+      display: flex;
+      align-items: center;
+
+      .email_input {
+        width: 25%;
+      }
+
+      select {
+        margin-left: 2%;
+        padding: 1%;
+      }
+    }
+
+    .input_six_digit {
+      display: block;
+    }
+
+    .request_inputbox {
+      width: 99%;
+      min-height: 10vh;
+    }
+
+    input {
+      margin: 1% 0 1% 0;
+      min-height: 2.5vh;
+      font-size: 1rem;
+    }
+  }
+}

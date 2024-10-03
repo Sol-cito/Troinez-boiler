@@ -1,0 +1,101 @@
+@import '/app/common.scss';
+
+.item_box {
+  display: inline-block;
+  width: 30%;
+  margin-left: 2.5%;
+  font-size: $product-list-fz;
+  margin-bottom: 10vh;
+  .item_img_box {
+    img {
+      position: relative !important;
+      width: 100%;
+      height: auto;
+    }
+  }
+  .item_desc_box {
+    .item_desc {
+      text-align: center;
+
+      .item_name {
+        font-weight: bold;
+      }
+      .item_price {
+        text-decoration: line-through;
+      }
+      .item_disc_price {
+        > span:first-child {
+          font-weight: bold;
+        }
+      }
+
+      .item_newest_icon {
+        .icon {
+          width: 2vw;
+          font-family: Tahoma, dotum;
+          color: #fff;
+          font-size: $product-list-newest-icon-fz;
+          font-weight: bold;
+          padding: 0.2vw 0.7vw 0.2vw 0.7vw;
+          text-align: center;
+          display: inline-block;
+          height: 1.2vw;
+          line-height: 1.2vw;
+          border-radius: 0.2vw;
+          background: lightslategrey;
+        }
+
+        .icon::after {
+          top: 100%;
+          left: 50%;
+          border: solid transparent;
+          content: ' ';
+          height: 0px;
+          width: 0px;
+          position: absolute;
+          pointer-events: none;
+          border-color: rgba(255, 74, 74, 0);
+          border-width: 0.3vw;
+          margin-left: -0.3vw;
+        }
+      }
+      .cart_area {
+        display: inline-block;
+        margin-bottom: 1vh;
+        cursor: pointer;
+      }
+    }
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5); // 회색 오버레이
+      z-index: 900; // 다른 요소들보다 상위에 위치하도록 z-index 설정
+    }
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .item_box {
+    width: 95%;
+    margin: 0;
+    font-size: 0.8rem;
+
+    .item_desc_box {
+      .item_desc {
+        text-align: left;
+
+        .item_newest_icon {
+          .icon {
+            font-size: 0.7rem;
+            line-height: 1.3rem;
+            width: 7vw;
+            height: 1.3rem;
+          }
+        }
+      }
+    }
+  }
+}

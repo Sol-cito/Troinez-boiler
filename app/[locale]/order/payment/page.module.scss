@@ -1,0 +1,16 @@
+.tossPayments {
+  text-align: center;
+  .purchase_button {
+    width: 20%;
+    line-height: 3vh;
+    margin: 5% 0 5% 0;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .tossPayments {
+    .purchase_button {
+      font-size: 1rem;
+    }
+  }
+}

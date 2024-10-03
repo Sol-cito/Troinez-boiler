@@ -1,0 +1,276 @@
+@import '/app/common.scss';
+
+.detail_box {
+  display: flex;
+  justify-content: space-between;
+
+  .left_cont {
+    width: 40%;
+    margin: 2.5% 0 0 2.5%;
+    // background-color: lightcyan;
+    .img_box {
+      position: relative;
+      height: 30vw;
+    }
+    .img_slide_box {
+      margin-top: 0.5vw;
+      .img_slide_inner_box {
+        img {
+          border: 1px solid lightgray;
+        }
+      }
+    }
+  }
+
+  .right_cont {
+    width: 50%;
+    font-size: $product-detail-description-fz;
+    margin: 2.5% 2.5% 0 0;
+    // background-color: yellow;
+    .desc_box {
+      line-height: 2;
+
+      .desc_title {
+        font-size: $product-detail-title-fz;
+        font-weight: bold;
+        color: darkgray;
+      }
+      .desc_price {
+        font-size: 1vw;
+        font-weight: bold;
+      }
+      .desc_original_price {
+        text-decoration: line-through;
+        margin-right: 0.5vw;
+      }
+      .desc_product_eng {
+        font-size: $product-detail-description-fz;
+        font-weight: bold;
+      }
+      .desc_product_kor {
+        font-size: $product-detail-description-fz;
+      }
+      .desc_sub_title {
+        margin: 1.5vw 0 0.5vw 0;
+        color: gray;
+        font-weight: bold;
+      }
+      .desc_sub_elt {
+        margin: 0 0;
+        color: gray;
+        font-weight: bold;
+      }
+
+      .desc_sub_elt:last-child {
+        margin-bottom: 10px;
+      }
+
+      .desc_caution {
+        font-weight: bolder;
+        margin: 0.5vw 0;
+      }
+
+      .delivery_title {
+        font-weight: bold;
+      }
+
+      .delivery_elt {
+        color: gray;
+        margin: 0 0;
+      }
+    }
+    .payment_box {
+      .payment_select_box {
+        .payment_select {
+          height: 4.5vw;
+          margin: 1vw 0;
+          background-color: whitesmoke;
+          display: flex;
+          justify-content: space-between;
+          div {
+            margin: auto 0;
+            input {
+              width: 2vw;
+              text-align: center;
+            }
+          }
+          .payment_select_title {
+            padding-left: 1vw;
+            font-size: $product-detail-payment-select-fz;
+            font-weight: bold;
+            width: 16vw;
+          }
+          .payment_select_price {
+            padding-right: 1vw;
+            font-size: $product-detail-payment-select-fz;
+            font-weight: bold;
+          }
+        }
+      }
+      .payment_total_price_box {
+        display: flex;
+        justify-content: space-between;
+        font-size: $product-detail-payment-total-fz;
+        line-height: 2.5vw;
+        padding: 1vw;
+        .payment_total_count {
+          color: gray;
+        }
+        .payment_total_price {
+          font-weight: bold;
+        }
+      }
+      .payment_decision_box {
+        display: flex;
+        justify-content: space-between;
+        button {
+          width: 48%;
+          line-height: 3vw;
+        }
+        .payment_decision_buy {
+          cursor: pointer;
+          background-color: darkgray;
+          border: 3px solid darkgray;
+          color: white;
+          font-weight: bold;
+          margin-left: 1%;
+          font-size: $product-detail-payment-nonmember-payment-btn;
+        }
+        .payment_decision_basket {
+          cursor: pointer;
+          background-color: white;
+          border: 3px solid whitesmoke;
+          font-weight: bold;
+          margin-right: 1%;
+          font-size: $product-detail-payment-cart-btn;
+        }
+        .payment_not_available_btn {
+          width: 100%;
+          line-height: 3vw;
+          font-size: $product-detail-payment-not-available-btn-fz;
+          color: white;
+          background-color: black;
+        }
+      }
+      hr {
+        background-color: black;
+        height: 1px;
+        margin: 0.8vw 1%;
+      }
+    }
+  }
+}
+
+.detail_image_box {
+  display: flex;
+  flex-direction: column;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); // 회색 오버레이
+  z-index: 900; // 다른 요소들보다 상위에 위치하도록 z-index 설정
+}
+
+.shipping_title {
+  font-weight: bold;
+}
+.shipping_sub_title {
+  line-height: 1vw;
+}
+.return_title {
+  font-weight: bold;
+}
+.return_sub_title {
+  line-height: 1vw;
+}
+
+.return_sub2_title {
+  line-height: 1vw;
+  margin-left: 1vw;
+}
+@media screen and (max-width: 780px) {
+  .detail_box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .left_cont {
+      width: 100%;
+      margin: 0;
+    }
+
+    .right_cont {
+      width: 95%;
+      margin: 0;
+      font-size: 0.7rem;
+
+      .desc_box {
+        .desc_title,
+        .desc_price {
+          text-align: center;
+          font-size: 1rem;
+        }
+      }
+
+      .payment_box {
+        .payment_select_box {
+          .payment_select {
+            height: fit-content;
+            align-items: center;
+
+            div {
+              input {
+                min-width: 10vw;
+              }
+            }
+
+            .payment_select_title,
+            .payment_select_price {
+              font-size: 0.7rem;
+              width: 30%;
+              margin: 1vh 0 1vh 0;
+            }
+
+            .payment_select_price {
+              text-align: right;
+            }
+          }
+        }
+
+        .payment_total_price_box {
+          font-size: 0.7rem;
+          margin: 1vh 0 1vh 0;
+        }
+
+        .payment_decision_box {
+          position: fixed;
+          bottom: 0;
+          left: 0;
+          height: 8vh;
+          width: 100%;
+
+          button {
+            color: black;
+            font-size: 1rem !important;
+            margin: 0 !important;
+            width: 50%;
+          }
+        }
+
+        hr {
+          margin: 2vh 0 2vh 0;
+        }
+      }
+    }
+  }
+}

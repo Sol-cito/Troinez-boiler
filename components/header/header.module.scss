@@ -1,12 +1,128 @@
+@import '/app/common.scss';
+$header-height: $header-ht;
+$header-fond-size: $header-fz;
+
+.header {
+  width: 75%;
+  margin: 0 auto;
+  font-size: $header-fond-size;
+}
+
 .nav {
-  a {
-    margin-right: 30px;
-  }
-  .logo {
-    // margin: 0 0 0 0;
+  display: flex;
+  vertical-align: middle;
+  align-items: center;
+
+  a,
+  span {
+    display: inline-block;
+    margin-right: 2vw;
+    text-decoration: none;
+    color: black;
+    text-align: center;
   }
 
-  .menu_btn {
-    // margin: 0 30px 0 30px;
+  .cart_btn {
+    margin-right: 0.5vw !important;
+  }
+  .cart_btn:hover {
+    text-shadow: 0px 0px 1px black;
+  }
+  .menu_btn:hover {
+    text-shadow: 0px 0px 1px black;
+  }
+
+  .left {
+    width: 45%;
+    a {
+      margin-left: 5%;
+      height: 3.5vw;
+      img {
+        text-align: left;
+        position: relative !important;
+        vertical-align: middle;
+      }
+    }
+  }
+
+  .mid {
+    position: relative;
+    width: 10%;
+
+    .username {
+      left: -150%;
+      position: absolute;
+    }
+
+    div {
+      height: $header-height;
+      line-height: $header-height;
+      img {
+        position: relative !important;
+        vertical-align: middle;
+      }
+    }
+  }
+
+  .right {
+    text-align: right;
+    width: 45%;
+
+    .num_of_cart_item_wrapper {
+      display: inline-block;
+      min-width: max-content;
+      min-height: max-content;
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      background-color: black;
+      color: white;
+      text-align: center;
+      line-height: 25px;
+    }
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .header {
+    background-color: white;
+    position: fixed;
+    width: 100%;
+
+    display: flex;
+
+    height: max-content;
+    z-index: 10;
+  }
+
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    line-height: 6vh;
+
+    .left {
+      width: 45%;
+      text-align: left;
+
+      a {
+        height: inherit;
+        margin: 0;
+        padding: 0;
+      }
+    }
+
+    .mid {
+      width: inherit;
+
+      .username {
+        font-size: 0.5rem;
+        left: -170%;
+        position: absolute;
+      }
+
+      div {
+        margin-top: 1%;
+      }
+    }
   }
 }
